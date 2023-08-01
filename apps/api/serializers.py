@@ -21,14 +21,17 @@ class BoardSerializer(serializers.ModelSerializer):
         model = Board
         fields = (
             'name',
-            'column'
+            'column',
+            'created_at',
+            'updated_at'
         )
 
 
-class SubTaskSerializer(serializers.ModelSerializer):
+class SubtaskSerializer(serializers.ModelSerializer):
     class Meta:
         model = Subtask
         fields = (
             'name',
-            'column'
+            'created_at',
+            'updated_at'
         )
